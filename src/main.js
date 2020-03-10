@@ -7,4 +7,4 @@ import data from './data/pokemon/pokemon.js';
 // import data from './data/steam/steam.js';
 // import data from './data/worldbank/worldbank.js';
 
-console.log(example, data);
+//console.log(example, data);
