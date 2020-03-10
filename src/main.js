@@ -7,5 +7,7 @@ import data from './data/pokemon/pokemon.js';
 // import data from './data/steam/steam.js';
 // import data from './data/worldbank/worldbank.js';
 
+let prueba= "Hola"
+
 // probando ingreso de cambios 
 console.log(example, data);
