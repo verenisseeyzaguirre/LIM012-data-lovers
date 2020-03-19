@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Lato";
 }
 
 .container {
@@ -35,15 +36,54 @@ header {
 header .logo {
     color: #333333;
     font-size: 30px;
+    padding: 10px;
 }
 
 header .logo img {
-    width: 50px;
+    width: 70px;
     vertical-align: top;
 }
 
 header .logo a {
     color: #333333;
     text-decoration: none;
-    line-height: 50px;
+    line-height: 70px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+header nav {
+    width: 100%;
+
+    /* Flex */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header nav a {
+    background: #ffffff;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-right: 1px solid #D3D3D3;
+
+    /* Flex */
+    flex-grow: 1;
+}
+
+.lastCategory {
+    border-right: none; 
+
+}
+
+header nav a:hover {
+    background: #D3D3D3;
+}
+
+main {
+    background: #ffffff;
+    padding: 20px;
+
 }
