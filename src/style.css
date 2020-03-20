@@ -73,7 +73,7 @@ header nav a {
     flex-grow: 1;
 }
 
-.lastCategory {
+header nav a:nth-last-child(1) {
     border-right: none; 
 
 }
@@ -86,4 +86,20 @@ main {
     background: #ffffff;
     padding: 20px;
 
+    /* Flex */
+    flex: 1  1 70%;
+}
+
+main section {
+    width: 100%;
+    
+}
+
+main section input {
+    background: #ffffff;
+    border: none;
+    height: 20px;
+    border-bottom: 2px solid #333333;
+    width: 50%;
+    
 }
