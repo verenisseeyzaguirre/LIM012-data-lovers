@@ -85,21 +85,90 @@ header nav a:hover {
 main {
     background: #ffffff;
     padding: 20px;
+    width: 100%;
 
     /* Flex */
-    flex: 1  1 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 main section {
+    width: 80%;
+
+    /* Flex */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+main section form {
+    width: 50%;
+    border-bottom: 2px solid #333333;
+    padding: 3px;
+    
+    /* Flex */
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;  
+}
+
+main section form input {
+    background: #ffffff;
+    padding: 10px;
+    border: none;
+    height: 20px;
     width: 100%;
     
 }
 
-main section input {
+main section form button {
     background: #ffffff;
+    padding-right: 5px;
     border: none;
-    height: 20px;
+}
+
+main section form button .search {
+    width: 15px;
+}
+
+main section .labels {
+    width: 100%;
     border-bottom: 2px solid #333333;
-    width: 50%;
+
+    /* Flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main section .labels label {
+    padding: 10px;
+    flex-grow: 1;
+}
+
+main section .title {
+    padding: 20px;
     
+}
+
+main section ul {
+    list-style: none;
+}
+
+main section ul li {
+    padding: 5px;
+}
+
+main section ul .odd {
+    background: #ffffff;
+}
+
+main section ul .even {
+    background: #D3D3D3;
 }
