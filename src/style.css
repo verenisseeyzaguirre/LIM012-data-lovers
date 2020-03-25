@@ -1,9 +1,15 @@
+/* Selector universal, eliminar margen, y padding de todos los elemento, 
+al igual que determina la fuente Lato para todo */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Lato";
 }
+
+/* Selector de class .container principal con flexbox que direcciona los elementos como rows (uno al lado del otro),
+y wrap para que se posiciones uno sobre el otro si el espacio es insuficiente */
 
 .container {
     background: #ffffff;
@@ -20,6 +26,9 @@
 body {
     background: #ffffff;
 }
+
+/* Selector de tag header con flex, funciona como contenedor alineando los elementos
+de manera centrada, los direcciona como columns (uno sobre el otro) */
 
 header {
     background: #ffffff;
@@ -61,6 +70,8 @@ header nav {
     align-items: center;
 }
 
+/* flex-grow especifica qué cantidad de espacio debe ocupar el elemento dentro del contenedor */
+
 header nav a {
     background: #ffffff;
     color: #333333;
@@ -72,6 +83,8 @@ header nav a {
     /* Flex */
     flex-grow: 1;
 }
+
+/* a:nth-last-child(1) selecciona el último hijo del selector tag a */
 
 header nav a:nth-last-child(1) {
     border-right: none; 
@@ -132,10 +145,6 @@ main section form button {
     border: none;
 }
 
-main section form button .search {
-    width: 15px;
-}
-
 main section .labels {
     width: 100%;
     border-bottom: 2px solid #333333;
@@ -144,12 +153,21 @@ main section .labels {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 main section .labels label {
+    font-size: 14px;
+    color: #333333;
     padding: 10px;
     flex-grow: 1;
+}
+
+main section button {
+    background: #ffffff;
+    padding-right: 5px;
+    border: none;
+    cursor: pointer;
 }
 
 main section .title {
@@ -165,10 +183,121 @@ main section ul li {
     padding: 5px;
 }
 
-main section ul .odd {
-    background: #ffffff;
+main section ul li {
+    width: 100%;
+
+    /* Flex */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-main section ul .even {
-    background: #D3D3D3;
+/* flex-grow especifica qué cantidad de espacio debe ocupar el elemento dentro del contenedor */
+
+main section ul li a {
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    /* Flex */
+    flex-grow: 1;
+}
+
+/* HTML producido por JS */
+
+
+
+#data {
+    background: #e9ecf4;
+    padding: 5px;
+}
+
+.flags {
+    width: 30px;
+}
+
+
+.grey {
+    background: #F2F2F2;
+    height: 55px;
+    padding-top: 3px;
+    padding-bottom: 3px; 
+}
+
+.white {
+    background:white;
+    height: 55px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.noc {
+    color: green;
+    width: 200px;
+}
+
+.name {
+    width: 200px;
+}
+
+.disciplina {
+    color:blue;
+    width: 200px;
+}
+
+.goldMedal {
+    width: 30px;
+	height: 30px;
+    border-radius: 50%;
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+    background: #F2C94C;
+    margin-right: 5px;
+}
+
+.silverMedal {
+    width: 30px;
+	height: 30px;
+    border-radius: 50%;
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+    background: #BDBDBD;
+    margin-right: 5px;
+}
+
+.bronzeMedal {
+    width: 30px;
+	height: 30px;
+    border-radius: 50%;
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+    background: #E4954B;
+    margin-right: 5px;
+}
+
+.totalMedals  {
+    position: relative;
+}
+
+.total {
+    position: absolute;
+    width: 30px;
+	height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.laurel {
+    vertical-align: top;
+    opacity: 0.8;
 }
