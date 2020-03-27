@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -11,12 +11,13 @@
          
       </header>
       <nav>
+           
           <section id="mainScreen">
             <ul>
               <label class="medals">MEDALLAS</label>
               <li class="medals"><img src="imagenes/button icons/001-winner.png"></li>
-              <label>DISCIPLINAS</label>
-              <li><img src="imagenes/button icons/007-sport.png"></li>
+              <label class="disciplinas">DISCIPLINAS</label>
+              <li class="disciplinas"><img src="imagenes/button icons/007-sport.png"></li>
               <label>TEMPORADAS</label>
               <li><img src="imagenes/button icons/010-snowflake.png"></li>
               <label>PAISES</label>
@@ -25,13 +26,94 @@
               <li><img src="imagenes/button icons/012-jogging.png"></li>
             </ul>
           </section>
+          
       </nav>
       <main>
           <h1>JUEGOS OLÍMPICOS</h1>
+          <template id="mytemplate">
+            <div>Hola soy un template</div>
+          </template>
+          <button>Intercambiar orden</button>
       </main>
-      <footer></footer>
+      <footer>
+      </footer>
     </section> 
       <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Data Lovers</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <section class="logo">
+                    <img src="imagenes/header and main icons/001-olympic-games.png" width="150" alt="">
+                    <a href="#">JUEGOS OLÍMPICOS</a>
+                </section>
+
+                <nav>
+                    <a>ATLETAS</a>
+                    <a id="btnMedallas">MEDALLAS</a>
+                    <a href="#">DISCIPLINAS</a>
+                    <a href="#">TEMPORADAS</a>
+                    <a href="#">PAÍSES</a>
+                </nav>
+            </header>
+
+            <main>
+                <section>
+                    <form>
+                        <input type="text" placeholder="Buscar...">
+                        <button id="btnSearch">
+                            <img src="imagenes/header and main icons/010-magnifying-glass-2.png" width="15" alt="">
+                        </button>
+                    </form>
+                    <section id="pageInicial">
+                    </section>
+                    <section id="pageMedallas" class="hide">
+                      <h1 class="title">MEDALLAS</h1>
+                        <!--<section class="labels">
+                        </section> 
+                          <table>
+                            <tr>
+                              <th>#</th>
+                              <th>PAÍS</th>
+                              <th>MEDALLISTA</th>
+                              <th>DISCIPLINAS</th>
+                              <th>MEDALLAS</th>
+                              <th>
+                                <button id="btnOrder">
+                                    <img src="imagenes/header and main icons/013-arrows-1.png" width="20" alt="">
+                                </button>
+                              </th>  
+                            </tr>
+                          </table>  -->                      
+                      
+                          <table id="listaAtletas">
+                          </table>
+                    </section>
+                    <section id="pageAtleta" class="hide">
+                      <br>
+                      <button id="back">
+                        <img src="imagenes/header and main icons/010-magnifying-glass-2.png" width="15" alt="">
+                      </button>
+                      <ul id="fichaAtleta">
+                      </ul>
+                    </section>
+                </section>
+                <footer>
+                </footer>
+            </main>
+        </div>
+        <script src="main.js" type="module"></script>
+    </body>
 </html>

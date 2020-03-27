@@ -1,5 +1,190 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato";
+}
+
+a {
+text-decoration: none;
+}
+
+.container {
+    background: #ffffff;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+
+    /* Flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+body {
+    background: #ffffff;
+}
+
+header {
+    background: #ffffff;
+    width: 100%;
+    padding: 20px;
+
+    /* Flex */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    color: #333333;
+    font-size: 30px;
+    padding: 10px;
+}
+
+header .logo img {
+    width: 70px;
+    vertical-align: top;
+}
+
+header .logo a {
+    color: #333333;
+    text-decoration: none;
+    line-height: 70px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+header nav {
+    width: 100%;
+
+    /* Flex */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header nav a {
+    background: #ffffff;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-right: 1px solid #D3D3D3;
+
+    /* Flex */
+    flex-grow: 1;
+}
+
+header nav a:nth-last-child(1) {
+    border-right: none; 
+
+}
+
+header nav a:hover {
+    background: #D3D3D3;
+}
+
+main {
+    background: #ffffff;
+    padding: 20px;
+    width: 100%;
+
+    /* Flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+main section {
+    width: 80%;
+
+    /* Flex */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+main section form {
+    width: 50%;
+    border-bottom: 2px solid #333333;
+    padding: 3px;
+    
+    /* Flex */
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;  
+}
+
+main section form input {
+    background: #ffffff;
+    padding: 10px;
+    border: none;
+    height: 20px;
+    width: 100%;
+    
+}
+
+main section form button {
+    background: #ffffff;
+    padding-right: 5px;
+    border: none;
+}
+
+main section .labels {
+    width: 100%;
+    border-bottom: 2px solid #333333;
+
+    /* Flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main section .labels label {
+    font-size: 14px;
+    color: #333333;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+main section button {
+    background: #ffffff;
+    padding-right: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+main section .title {
+    padding: 20px;
+    
+}
+
+main section ul {
+    list-style: none;
+}
+
+main section ul li {
+    padding: 5px;
+}
+
+main section ul .odd {
+    background: #ffffff;
+}
+
+main section ul .even {
+    background: #D3D3D3;
+}
+
+/* 
+* {
+    margin: 0;
     padding: 5px;
 }
 
@@ -26,11 +211,16 @@ body {
     grid-template-rows: repeat(5, auto);
 }
 
-#firstContainer nav {
+#firstContainer .medals {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    text-align: center;
-    
+    text-align: center;    
+}
+
+#firstContainer .disciplinas {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    text-align: center;    
 }
 
 li {
@@ -43,3 +233,78 @@ li {
     grid-row: 3 / 4;
     text-align: center;
 }
+*/
+
+#data {
+    background: #e9ecf4;
+    padding: 5px;
+}
+
+.bandera {
+    width: 5%;
+}
+
+
+.pink {
+    background: #e9ecf4;
+    padding: 10px 0;
+}
+
+.white {
+    background:white;
+    padding: 10px 0;
+}
+
+.noc {
+    color: green;
+    width: 200px;
+}
+
+.name {
+    width: 200px;
+}
+
+.disciplina {
+    color:blue;
+    width: 200px;
+}
+
+.medallaOro {
+    width: 3rem;
+	height: 3rem;
+    border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    margin:1px auto;
+    padding:1%;
+    background: #eeca2b;
+}
+
+.medallaSilver {
+    width: 3rem;
+	height: 3rem;
+    border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    margin:1px auto;
+    padding:1%;
+    background: #81807c;
+}
+
+.medallaBronze {
+    width: 3rem;
+	height: 3rem;
+    border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    margin:1px auto;
+    padding:1%;
+    background: #d66519;
+}
+
+.hide {
+    display: none;
+  }
