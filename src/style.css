@@ -1,15 +1,14 @@
-/* Selector universal, eliminar margen, y padding de todos los elemento, 
-al igual que determina la fuente Lato para todo */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lato";
+    font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
-/* Selector de class .container principal con flexbox que direcciona los elementos como rows (uno al lado del otro),
-y wrap para que se posiciones uno sobre el otro si el espacio es insuficiente */
+.hide {
+    display: none;
+  }
+
 
 .container {
     background: #ffffff;
@@ -27,9 +26,6 @@ body {
     background: #ffffff;
 }
 
-/* Selector de tag header con flex, funciona como contenedor alineando los elementos
-de manera centrada, los direcciona como columns (uno sobre el otro) */
-
 header {
     background: #ffffff;
     width: 100%;
@@ -42,26 +38,23 @@ header {
     flex-wrap: wrap;
 }
 
-header .logo {
-    color: #333333;
-    font-size: 30px;
-    padding: 10px;
+/* section id="menu" */
+
+header #menu {
+    width: 80%;
+
 }
 
-header .logo img {
-    width: 70px;
-    vertical-align: top;
-}
-
-header .logo a {
+header #menu h1 {
     color: #333333;
-    text-decoration: none;
+    font-size: 40px;
+    text-align: center;
     line-height: 70px;
     font-weight: bolder;
     padding: 10px;
 }
 
-header nav {
+header #menu nav {
     width: 100%;
 
     /* Flex */
@@ -70,9 +63,132 @@ header nav {
     align-items: center;
 }
 
-/* flex-grow especifica qué cantidad de espacio debe ocupar el elemento dentro del contenedor */
+header #menu nav a {
+    background: #ffffff;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
 
-header nav a {
+    /* Flex */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header #menu nav a p {
+    font-size: 12px;
+    margin: 10px;
+
+}
+
+header #menu nav a div {
+    background: #ffffff;
+    width: 120px;
+	height: 120px;
+    border-radius: 50%;
+    border: solid 3px #333333;
+    margin: 5px;
+    /* Flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header #menu nav a .lightBlue {
+    border: solid 8px #00b6bd;
+    
+}
+
+header #menu nav a .lightBlue:hover {
+    border: solid 8px #00dbcd;
+    background: #00dbcd;
+    
+}
+
+header #menu nav a .darkBlue {
+    border: solid 8px #005457;
+    
+}
+
+header #menu nav a .darkBlue:hover {
+    border: solid 8px #007175;
+    background: #007175;
+    
+}
+
+header #menu nav a .pink {
+    border: solid 8px #fd0f81;
+    
+}
+
+header #menu nav a .pink:hover {
+    border: solid 8px #ff73b0;
+    background: #ff73b0;
+    
+}
+
+header #menu nav a .yellow {
+    border: solid 8px #ff9811;
+    
+}
+
+header #menu nav a .yellow:hover {
+    border: solid 8px #ffcd00;
+    background: #ffcd00;
+    
+}
+
+header #menu nav a .green {
+    border: solid 8px #4cba68;
+    
+}
+
+header #menu nav a .green:hover {
+    border: solid 8px #91dc5a;
+    background: #91dc5a;
+    
+}
+
+/* section id="header" */
+
+header #header {
+    width: 100%;
+    text-align: center;
+
+}
+
+header #header .logo {
+    color: #333333;
+    font-size: 30px;
+    padding: 10px;
+}
+
+header #header .logo img {
+    width: 70px;
+    vertical-align: top;
+}
+
+header #header .logo a {
+    color: #333333;
+    text-decoration: none;
+    line-height: 70px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+header #header nav {
+    width: 100%;
+
+    /* Flex */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header #header nav a {
     background: #ffffff;
     color: #333333;
     text-align: center;
@@ -84,14 +200,12 @@ header nav a {
     flex-grow: 1;
 }
 
-/* a:nth-last-child(1) selecciona el último hijo del selector tag a */
-
-header nav a:nth-last-child(1) {
+header #header nav a:nth-last-child(1) {
     border-right: none; 
 
 }
 
-header nav a:hover {
+header #header nav a:hover {
     background: #D3D3D3;
 }
 
@@ -118,7 +232,9 @@ main section {
     
 }
 
-main section form {
+/* section id="medalsPage" */
+
+main #medalsPage form {
     width: 50%;
     border-bottom: 2px solid #333333;
     padding: 3px;
@@ -130,7 +246,7 @@ main section form {
     justify-content: space-between;  
 }
 
-main section form input {
+main #medalsPage form input {
     background: #ffffff;
     padding: 10px;
     border: none;
@@ -139,83 +255,104 @@ main section form input {
     
 }
 
-main section form button {
+main #medalsPage form button {
     background: #ffffff;
     padding-right: 5px;
     border: none;
 }
 
-main section .labels {
-    width: 100%;
-    border-bottom: 2px solid #333333;
-
-    /* Flex */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-main section .labels label {
-    font-size: 14px;
-    color: #333333;
-    padding: 10px;
-    flex-grow: 1;
-}
-
-main section button {
+main #medalsPage button {
     background: #ffffff;
     padding-right: 5px;
     border: none;
     cursor: pointer;
 }
 
-main section .title {
+main #medalsPage .title {
     padding: 20px;
     
 }
 
-main section ul {
+/* section id="athletePage" */
+
+main #athletePage button {
+    background: #ffffff;
+    width: 20px;
+    border: none;
+    cursor: pointer;
+    justify-self: left;
+}
+
+main #athletePage ul {
     list-style: none;
+
 }
 
-main section ul li {
+main #athletePage ul li {
     padding: 5px;
-}
-
-main section ul li {
     width: 100%;
 
     /* Flex */
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-/* flex-grow especifica qué cantidad de espacio debe ocupar el elemento dentro del contenedor */
+main #athletePage ul li div {
+    width: 100%;
+    padding: 20px;
+}
 
-main section ul li a {
-    color: #333333;
-    text-align: center;
-    text-decoration: none;
-    padding: 5px;
+main #athletePage ul li .whiteDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+main #athletePage ul li .whiteDiv .figure {
+    font-size: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+main #athletePage ul li .greyDiv {
+    background: #F2F2F2;
+    
     /* Flex */
-    flex-grow: 1;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* HTML producido por JS */
+main #athletePage ul li .greyDiv div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
 
-
+main #athletePage ul li .greyDiv div a {
+    padding: 5px;
+    margin: 5px;
+}
 
 #data {
     background: #e9ecf4;
     padding: 5px;
 }
 
-.flags {
-    width: 30px;
+.bandera {
+    width: 5%;
 }
-
 
 .grey {
     background: #F2F2F2;
@@ -300,4 +437,11 @@ main section ul li a {
 .laurel {
     vertical-align: top;
     opacity: 0.8;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    
 }
