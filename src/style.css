@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+<<<<<<< HEAD
     font-family: "Lato";
 }
 
@@ -186,31 +187,70 @@ main section ul .even {
 * {
     margin: 0;
     padding: 5px;
+=======
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+>>>>>>> 6aa7e5989966dde14294c1040a0f92f20c1061aa
 }
 
-img {
-    width: 30%;
-    height: 30%;
-    display: block;
+.hide {
+    display: none;
+  }
+
+
+.container {
+    background: #ffffff;
+    width: 90%;
+    max-width: 1000px;
     margin: auto;
+
+    /* Flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 body {
     background: #ffffff;
-    color: #000000;
-    font-family: "Lato", sans-serif; 
 }
 
-#firstContainer {
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, auto);
+header {
+    background: #ffffff;
+    width: 100%;
+    padding: 20px;
+
+    /* Flex */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
+/* section id="menu" */
+
+header #menu {
+    width: 80%;
+
+}
+
+header #menu h1 {
+    color: #333333;
+    font-size: 40px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+header #menu nav {
+    width: 100%;
+
+    /* Flex */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+<<<<<<< HEAD
 #firstContainer .medals {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
@@ -221,19 +261,294 @@ body {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     text-align: center;    
-}
-
-li {
-    list-style: none;
-}
-
-#firstContainer > main {
-    background: #e9ecf4;
-    grid-column: 3 / 4;
-    grid-row: 3 / 4;
+=======
+header #menu nav a {
+    background: #ffffff;
+    color: #333333;
     text-align: center;
+    text-decoration: none;
+    padding: 10px;
+
+    /* Flex */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header #menu nav a p {
+    font-size: 12px;
+    margin: 10px;
+
+}
+
+header #menu nav a div {
+    background: #ffffff;
+    width: 120px;
+	height: 120px;
+    border-radius: 50%;
+    border: solid 3px #333333;
+    margin: 5px;
+    /* Flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header #menu nav a .lightBlue {
+    border: solid 8px #00b6bd;
+    
+}
+
+header #menu nav a .lightBlue:hover {
+    border: solid 8px #00dbcd;
+    background: #00dbcd;
+    
+}
+
+header #menu nav a .darkBlue {
+    border: solid 8px #005457;
+    
+}
+
+header #menu nav a .darkBlue:hover {
+    border: solid 8px #007175;
+    background: #007175;
+    
+}
+
+header #menu nav a .pink {
+    border: solid 8px #fd0f81;
+    
+}
+
+header #menu nav a .pink:hover {
+    border: solid 8px #ff73b0;
+    background: #ff73b0;
+    
+>>>>>>> 6aa7e5989966dde14294c1040a0f92f20c1061aa
+}
+
+header #menu nav a .yellow {
+    border: solid 8px #ff9811;
+    
+}
+
+header #menu nav a .yellow:hover {
+    border: solid 8px #ffcd00;
+    background: #ffcd00;
+    
+}
+
+header #menu nav a .green {
+    border: solid 8px #4cba68;
+    
+}
+
+header #menu nav a .green:hover {
+    border: solid 8px #91dc5a;
+    background: #91dc5a;
+    
+}
+
+/* section id="header" */
+
+header #header {
+    width: 100%;
+    text-align: center;
+
+}
+
+header #header .logo {
+    color: #333333;
+    font-size: 30px;
+    padding: 10px;
+}
+
+header #header .logo img {
+    width: 70px;
+    vertical-align: top;
+}
+
+header #header .logo a {
+    color: #333333;
+    text-decoration: none;
+    line-height: 70px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+header #header nav {
+    width: 100%;
+
+    /* Flex */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header #header nav a {
+    background: #ffffff;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-right: 1px solid #D3D3D3;
+
+    /* Flex */
+    flex-grow: 1;
+}
+
+header #header nav a:nth-last-child(1) {
+    border-right: none; 
+
+}
+
+header #header nav a:hover {
+    background: #D3D3D3;
+}
+
+main {
+    background: #ffffff;
+    padding: 20px;
+    width: 100%;
+
+    /* Flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+main section {
+    width: 80%;
+
+    /* Flex */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+/* section id="medalsPage" */
+
+main #medalsPage form {
+    width: 50%;
+    border-bottom: 2px solid #333333;
+    padding: 3px;
+    
+    /* Flex */
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;  
+}
+
+main #medalsPage form input {
+    background: #ffffff;
+    padding: 10px;
+    border: none;
+    height: 20px;
+    width: 100%;
+    
+}
+
+main #medalsPage form button {
+    background: #ffffff;
+    padding-right: 5px;
+    border: none;
+}
+
+main #medalsPage button {
+    background: #ffffff;
+    padding-right: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+main #medalsPage .title {
+    padding: 20px;
+    
+}
+
+/* section id="athletePage" */
+
+main #athletePage button {
+    background: #ffffff;
+    width: 20px;
+    border: none;
+    cursor: pointer;
+    justify-self: left;
+}
+
+main #athletePage ul {
+    list-style: none;
+
+}
+
+main #athletePage ul li {
+    padding: 5px;
+    width: 100%;
+
+    /* Flex */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main #athletePage ul li div {
+    width: 100%;
+    padding: 20px;
+}
+
+main #athletePage ul li .whiteDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+main #athletePage ul li .whiteDiv .figure {
+    font-size: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+main #athletePage ul li .greyDiv {
+    background: #F2F2F2;
+    
+    /* Flex */
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main #athletePage ul li .greyDiv div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+<<<<<<< HEAD
 }
 */
+=======
+    
+}
+
+main #athletePage ul li .greyDiv div a {
+    padding: 5px;
+    margin: 5px;
+}
+>>>>>>> 6aa7e5989966dde14294c1040a0f92f20c1061aa
 
 #data {
     background: #e9ecf4;
@@ -244,15 +559,29 @@ li {
     width: 5%;
 }
 
+<<<<<<< HEAD
 
 .pink {
     background: #e9ecf4;
     padding: 10px 0;
+=======
+.grey {
+    background: #F2F2F2;
+    height: 55px;
+    padding-top: 3px;
+    padding-bottom: 3px; 
+>>>>>>> 6aa7e5989966dde14294c1040a0f92f20c1061aa
 }
 
 .white {
     background:white;
+<<<<<<< HEAD
     padding: 10px 0;
+=======
+    height: 55px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+>>>>>>> 6aa7e5989966dde14294c1040a0f92f20c1061aa
 }
 
 .noc {
@@ -269,6 +598,7 @@ li {
     width: 200px;
 }
 
+<<<<<<< HEAD
 .medallaOro {
     width: 3rem;
 	height: 3rem;
@@ -308,3 +638,68 @@ li {
 .hide {
     display: none;
   }
+=======
+.goldMedal {
+    width: 30px;
+	height: 30px;
+    border-radius: 50%;
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+    background: #F2C94C;
+    margin-right: 5px;
+}
+
+.silverMedal {
+    width: 30px;
+	height: 30px;
+    border-radius: 50%;
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+    background: #BDBDBD;
+    margin-right: 5px;
+}
+
+.bronzeMedal {
+    width: 30px;
+	height: 30px;
+    border-radius: 50%;
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+    background: #E4954B;
+    margin-right: 5px;
+}
+
+.totalMedals  {
+    position: relative;
+}
+
+.total {
+    position: absolute;
+    width: 30px;
+	height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.laurel {
+    vertical-align: top;
+    opacity: 0.8;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    
+}
+>>>>>>> 6aa7e5989966dde14294c1040a0f92f20c1061aa
