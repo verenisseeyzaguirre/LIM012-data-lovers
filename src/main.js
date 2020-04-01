@@ -1,7 +1,7 @@
 // importando las funciones de data.js
-import { medalists, sortData } from "./data.js";
+import { medalists, sortData } from './data.js';
 // importando la data con la que se trabaja
-import data from "./data/atletas/atletas.js";
+import data from './data/atletas/atletas.js';
 // almacenando la data por objeto(atleta) en dataAtleas
 const athletesData = data.atletas;
 // ejecuta la fx medallistas con dataAtletas, se guarda en la var. resultadoMedallistas lo q retorna
@@ -10,9 +10,9 @@ const medalistsResult = medalists(athletesData);
 const mostMedals = sortData(medalistsResult, -1);
 // funcion que MUESTRA 10 atletas ordenados por numero de medallas en Lista
 // 'listaAtletas' es el ID del UL en el HTML
-const athletesList = document.getElementById("athletesList");
+const athletesList = document.getElementById('athletesList');
 const showMedalists = (array) => {
-  let athletesRow = "";
+  let athletesRow = '';
   array.forEach((atleta, index) => {
     if (index < 10) {
       if (index === 0) {
@@ -104,9 +104,9 @@ botonSearch.addEventListener('click', buscar);
 */
 
 // 'fichaAtleta' es el ID del UL en el HTML
-const athleteFile = document.getElementById("athleteFile");
+const athleteFile = document.getElementById('athleteFile');
 const showAthlete = (array) => {
-  let athleteInfo = "";
+  let athleteInfo = '';
   array.forEach((atleta, index) => {
     if (index === 10) {
       athleteInfo = `
@@ -183,41 +183,41 @@ const orderMedals = () => {
     press = 1;
     const lessMedals = sortData(medalistsResult, 1);
     athletesList.innerHTML = showMedalists(lessMedals);
-    addClassPerId("athletePage", "hide");
+    addClassPerId('athletePage', 'hide');
   } else if (press === 1) {
     press = 0;
     const invertMedals = sortData(medalistsResult, -1);
     athletesList.innerHTML = showMedalists(invertMedals);
-    addClassPerId("athletePage", "hide");
+    addClassPerId('athletePage', 'hide');
   }
 };
 // imprimiento el resultados de la fx, filasAtleta, en el HTML
 const showAthleteScreen = () => {
-  addClassPerId("medalsPage", "hide");
+  addClassPerId('medalsPage', 'hide');
   athleteFile.innerHTML = showAthlete(mostMedals);
-  removeClassPerId("header", "hide");
-  removeClassPerId("athletePage", "hide");
+  removeClassPerId('header', 'hide');
+  removeClassPerId('athletePage', 'hide');
 };
 
 
 // imprimiento el resultados de la fx, filasAtleta, en el HTML
 const showMedalsScreen = () => {
-  addClassPerId("menu", "hide");
+  addClassPerId('menu', 'hide');
   // imprimiento el resultados de la fx, filasAtleta, en el HTML
   athletesList.innerHTML = showMedalists(mostMedals);
   // Ejecutar la funcion de ORDENAR luego de presionar el boton
-  const orderButton = document.getElementById("btnOrder");
-  orderButton.addEventListener("click", orderMedals);
-  removeClassPerId("header", "hide");
-  removeClassPerId("medalsPage", "hide");
-  addClassPerId("athletePage", "hide");
+  const orderButton = document.getElementById('btnOrder');
+  orderButton.addEventListener('click', orderMedals);
+  removeClassPerId('header', 'hide');
+  removeClassPerId('medalsPage', 'hide');
+  addClassPerId('athletePage', 'hide');
 };
 // Ejecutar la funcion de para mostrarFicha Atleta luego de presionar el boton
-const searchButton = document.getElementById("btnSearch");
-searchButton.addEventListener("click", showAthleteScreen);
+const searchButton = document.getElementById('btnSearch');
+searchButton.addEventListener('click', showAthleteScreen);
 // Ejecutar la funcion de para mostrar PAGE Medallas Atleta luego de presionar el boton
-const medalsButton = document.getElementById("btnMedallas");
-medalsButton.addEventListener("click", showMedalsScreen);
+const medalsButton = document.getElementById('btnMedallas');
+medalsButton.addEventListener('click', showMedalsScreen);
 
 /*
 // buscando imprimir ficha segun atleta
@@ -225,5 +225,5 @@ const imprimirNombreAtleta = () => {
 console.log('atleta');
 };
 const nombreFichaAtleta = document.getElementsById('nombreAtleta');
-nombreFichaAtleta.addEventListener('click', imprimirNombreAtleta); 
+nombreFichaAtleta.addEventListener('click', imprimirNombreAtleta);
 */
