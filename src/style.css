@@ -47,11 +47,15 @@ header #menu {
 
 header #menu h1 {
     color: #333333;
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     line-height: 70px;
     font-weight: bolder;
     padding: 10px;
+}
+
+header #menu .category {
+    display: none;
 }
 
 header #menu nav {
@@ -443,5 +447,66 @@ main #athletePage ul li .greyDiv div a {
 /* Responsive */
 
 @media screen and (max-width: 768px) {
+
+    .container {
+        background: #ffffff;
+        width: 100%;
+        margin: auto;
+    
+        /* Flex */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    header #menu nav {
+        width: 100%;
+    
+        /* Flex */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    header #menu nav a p {
+        display: none;
+    
+    }
+
+    header #menu h1 {
+        color: #333333;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        font-weight: bolder;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    header #menu .category {
+        display: block;        
+        font-size: 12px;
+        text-align: center;
+        margin: 15px;
+    }
+    
+    
+    header #menu nav a div {
+        background: #ffffff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: solid 2px #333333;
+        margin: 0;
+        /* Flex */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    header #menu nav a div img {
+        width: 30px;
+    }
+
     
 }

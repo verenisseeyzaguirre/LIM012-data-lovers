@@ -17,72 +17,65 @@ const showMedalists = (array) => {
     if (index < 10) {
       if (index === 0) {
         athletesRow += `
-        <tr>
-          <th>N°</th>
-          <th>PAÍS</th>
-          <th>MEDALLISTA</th>
-          <th>DISCIPLINAS</th>
-          <th>MEDALLAS</th>
-          <th>
-            <button id="btnOrder">
-              <img src="imagenes/header and main icons/013-arrows-1.png" width="20" alt="">
-            </button>
-          </th>  
-        </tr>
-        <tr class="white">
-          <td>${index + 1}</td>
-          <td class="noc">${atleta.noc}</td>
-          <td>
-            <a href="#"  id="nombreAtleta">${atleta.athleteName}</a>
-
-          </td>
-          <td class="disciplina">${atleta.disciplina.toUpperCase()}</td>
-          <td> 
+          <h3>N°</h3>
+          <h3>PAÍS</h3>
+          <h3>MEDALLISTA</h3>
+          <h3>DISCIPLINAS</h3>
+          <h3>MEDALLAS</h3>
+          <button id="btnOrder">
+            <img src="imagenes/header and main icons/013-arrows-1.png" width="20" alt="">
+          </button>
+          <div class="white">
+          <p>${index + 1}</p>
+          <p class="noc">${atleta.noc}</p>
+          <a id="nombreAtleta">${atleta.athleteName}</a>
+          <a class="disciplina">${atleta.disciplina.toUpperCase()}</a>
+          <div> 
             <a class="goldMedal">${atleta.medGold}<a>
             <a class="silverMedal">${atleta.medSilver}<a>
             <a class="bronzeMedal">${atleta.medBronze}<a>  
-          </td>
-          <td class="totalMedals">
+          </div>
+          <div class="totalMedals">
             <a class="total">${atleta.total}</a>
             <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
-          </td>
-        <tr>
+          </div>
+        </div>
         `;
       } else if (index % 2 === 0) {
         athletesRow += `
-        <tr class="white">
-          <td>${index + 1}</td>
-          <td class="noc">${atleta.noc}</td>
-          <td class="name">${atleta.athleteName}</td>
-          <td class="disciplina">${atleta.disciplina.toUpperCase()}</td>
-          <td> 
-            <a class="goldMedal">${atleta.medGold}<a>
-            <a class="silverMedal">${atleta.medSilver}<a>
-            <a class="bronzeMedal">${atleta.medBronze}<a>  
-          </td>
-          <td class="totalMedals">
-            <a class="total">${atleta.total}</a>
-            <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
-          </td>
-        <tr>
+        <div class="white">
+        <p>${index + 1}</p>
+        <p class="noc">${atleta.noc}</p>
+        <a id="nombreAtleta">${atleta.athleteName}</a>
+        <a class="disciplina">${atleta.disciplina.toUpperCase()}</a>
+        <div> 
+          <a class="goldMedal">${atleta.medGold}<a>
+          <a class="silverMedal">${atleta.medSilver}<a>
+          <a class="bronzeMedal">${atleta.medBronze}<a>  
+        </div>
+        <div class="totalMedals">
+          <a class="total">${atleta.total}</a>
+          <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
+        </div>
+        </div>
       `;
       } else {
         athletesRow += `
-        <tr class="grey">
-          <td>${index + 1}</td>
-          <td class="noc">${atleta.noc}</td>
-          <td class="name">${atleta.athleteName}</td>
-          <td class="disciplina">${atleta.disciplina.toUpperCase()}</td>
-          <td> 
-            <a class="goldMedal">${atleta.medGold}<a>
-            <a class="silverMedal">${atleta.medSilver}<a>
-            <a class="bronzeMedal">${atleta.medBronze}<a>  
-          </td>
-          <td class="totalMedals">
-            <a class="total">${atleta.total}</a>
-            <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
-          </td>
-        <tr>
+        <div class="grey">
+        <p>${index + 1}</p>
+        <p class="noc">${atleta.noc}</p>
+        <a id="nombreAtleta">${atleta.athleteName}</a>
+        <a class="disciplina">${atleta.disciplina.toUpperCase()}</a>
+        <div> 
+          <a class="goldMedal">${atleta.medGold}<a>
+          <a class="silverMedal">${atleta.medSilver}<a>
+          <a class="bronzeMedal">${atleta.medBronze}<a>  
+        </div>
+        <div class="totalMedals">
+          <a class="total">${atleta.total}</a>
+          <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
+        </div>
+        </div>
       `;
       }
     }
