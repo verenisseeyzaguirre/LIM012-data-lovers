@@ -17,29 +17,33 @@ const showMedalists = (array) => {
     if (index < 10) {
       if (index % 2 === 0) {
         athletesRow += `
-        <div class="white">
-            <a>${index + 1}</a>
-            <a class="noc">${atleta.noc}</a>
-            <a id="nombreAtleta">${atleta.athleteName}</a>
-            <a class="disciplina">${atleta.disciplina.toUpperCase()}</a>
-            <a class="goldMedal">${atleta.medGold}<a>
-            <a class="silverMedal">${atleta.medSilver}<a>
-            <a class="bronzeMedal">${atleta.medBronze}<a>  
-            <a class="total">${atleta.total}</a>
+        
+          <a class="num">${index + 1}</a>
+          <a class="noc">${atleta.noc}</a>
+          <a class="name" id="nombreAtleta">${atleta.athleteName}</a>
+          <a class="sport">${atleta.disciplina.toUpperCase()}</a>
+          <div class="medals">
+            <a class="goldMedal">${atleta.medGold}</a>
+            <a class="silverMedal">${atleta.medSilver}</a>
+            <a class="bronzeMedal">${atleta.medBronze}</a>  
           </div>
+          <a class="total">${atleta.total}</a>
+          
       `;
       } else {
         athletesRow += `
-        <div class="grey">
-            <a>${index + 1}</a>
-            <a class="noc">${atleta.noc}</a>
-            <a id="nombreAtleta">${atleta.athleteName}</a>
-            <a class="disciplina">${atleta.disciplina.toUpperCase()}</a>
-            <a class="goldMedal">${atleta.medGold}<a>
-            <a class="silverMedal">${atleta.medSilver}<a>
-            <a class="bronzeMedal">${atleta.medBronze}<a>  
-            <a class="total">${atleta.total}</a>
+        
+          <a class="num">${index + 1}</a>
+          <a class="noc">${atleta.noc}</a>
+          <a class="name" id="nombreAtleta">${atleta.athleteName}</a>
+          <a class="sport">${atleta.disciplina.toUpperCase()}</a>
+          <div class="medals">
+            <a class="goldMedal">${atleta.medGold}</a>
+            <a class="silverMedal">${atleta.medSilver}</a>
+            <a class="bronzeMedal">${atleta.medBronze}</a>  
           </div>
+          <a class="total">${atleta.total}</a>
+          
       `;
       }
     }
