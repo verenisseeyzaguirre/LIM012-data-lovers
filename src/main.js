@@ -15,67 +15,31 @@ const showMedalists = (array) => {
   let athletesRow = '';
   array.forEach((atleta, index) => {
     if (index < 10) {
-      if (index === 0) {
+      if (index % 2 === 0) {
         athletesRow += `
-          <h3>N°</h3>
-          <h3>PAÍS</h3>
-          <h3>MEDALLISTA</h3>
-          <h3>DISCIPLINAS</h3>
-          <h3>MEDALLAS</h3>
-          <button id="btnOrder">
-            <img src="imagenes/header and main icons/013-arrows-1.png" width="20" alt="">
-          </button>
-          <div class="white">
-          <p>${index + 1}</p>
-          <p class="noc">${atleta.noc}</p>
-          <a id="nombreAtleta">${atleta.athleteName}</a>
-          <a class="disciplina">${atleta.disciplina.toUpperCase()}</a>
-          <div> 
+        <div class="white">
+            <a>${index + 1}</a>
+            <a class="noc">${atleta.noc}</a>
+            <a id="nombreAtleta">${atleta.athleteName}</a>
+            <a class="disciplina">${atleta.disciplina.toUpperCase()}</a>
             <a class="goldMedal">${atleta.medGold}<a>
             <a class="silverMedal">${atleta.medSilver}<a>
             <a class="bronzeMedal">${atleta.medBronze}<a>  
-          </div>
-          <div class="totalMedals">
             <a class="total">${atleta.total}</a>
-            <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
           </div>
-        </div>
-        `;
-      } else if (index % 2 === 0) {
-        athletesRow += `
-        <div class="white">
-        <p>${index + 1}</p>
-        <p class="noc">${atleta.noc}</p>
-        <a id="nombreAtleta">${atleta.athleteName}</a>
-        <a class="disciplina">${atleta.disciplina.toUpperCase()}</a>
-        <div> 
-          <a class="goldMedal">${atleta.medGold}<a>
-          <a class="silverMedal">${atleta.medSilver}<a>
-          <a class="bronzeMedal">${atleta.medBronze}<a>  
-        </div>
-        <div class="totalMedals">
-          <a class="total">${atleta.total}</a>
-          <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
-        </div>
-        </div>
       `;
       } else {
         athletesRow += `
         <div class="grey">
-        <p>${index + 1}</p>
-        <p class="noc">${atleta.noc}</p>
-        <a id="nombreAtleta">${atleta.athleteName}</a>
-        <a class="disciplina">${atleta.disciplina.toUpperCase()}</a>
-        <div> 
-          <a class="goldMedal">${atleta.medGold}<a>
-          <a class="silverMedal">${atleta.medSilver}<a>
-          <a class="bronzeMedal">${atleta.medBronze}<a>  
-        </div>
-        <div class="totalMedals">
-          <a class="total">${atleta.total}</a>
-          <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
-        </div>
-        </div>
+            <a>${index + 1}</a>
+            <a class="noc">${atleta.noc}</a>
+            <a id="nombreAtleta">${atleta.athleteName}</a>
+            <a class="disciplina">${atleta.disciplina.toUpperCase()}</a>
+            <a class="goldMedal">${atleta.medGold}<a>
+            <a class="silverMedal">${atleta.medSilver}<a>
+            <a class="bronzeMedal">${atleta.medBronze}<a>  
+            <a class="total">${atleta.total}</a>
+          </div>
       `;
       }
     }
