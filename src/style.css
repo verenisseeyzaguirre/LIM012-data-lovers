@@ -285,13 +285,17 @@ main #medalsPage .medalsList {
     /* flex */
     
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 30px 50px 320px auto 105px 40px;
     grid-template-rows: 1;
 }
 
-/* main #medalsPage .medalsList .header {
-    grid-column: 1 / 7;
-}*/
+main #medalsPage .medalsList {
+    text-align: start;
+}
+
+main #medalsPage .medalsList a {
+    border-bottom: 2px solid #333333;
+}
 
 main #medalsPage .list {
     width: 100%;
@@ -299,9 +303,13 @@ main #medalsPage .list {
     /* flex */
     
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 30px 50px 320px auto 105px 40px;
     grid-template-rows: repeat(10, auto);
 
+}
+
+main #medalsPage .list {
+    text-align: start;
 }
 
 main #medalsPage .list .num {
@@ -420,29 +428,12 @@ main #athletePage ul li .greyDiv div a {
 .grey {
     background: #F2F2F2;
     height: 55px;
-    padding-top: 3px;
-    padding-bottom: 3px; 
 }
 
 .white {
     background:white;
     height: 55px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
-
-.noc {
-    color: green;
-    width: 200px;
-}
-
-.name {
-    width: 200px;
-}
-
-.disciplina {
-    color:blue;
-    width: 200px;
+    
 }
 
 .goldMedal {
@@ -478,12 +469,12 @@ main #athletePage ul li .greyDiv div a {
     margin-right: 5px;
 }
 
-.totalMedals  {
+.total {
     position: relative;
 }
 
-/*
-.total {
+
+.totalMedals {
     position: absolute;
     width: 30px;
 	height: 30px;
@@ -496,7 +487,7 @@ main #athletePage ul li .greyDiv div a {
     font-weight: bold;
     font-size: 12px;
 }
-*/
+
 
 
 .laurel {
