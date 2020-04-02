@@ -495,6 +495,10 @@ main #athletePage ul li .greyDiv div a {
     opacity: 0.8;
 }
 
+.burger {
+    display: none;
+}
+
 
 /* Responsive */
 
@@ -559,6 +563,55 @@ main #athletePage ul li .greyDiv div a {
     header #menu nav a div img {
         width: 30px;
     }
+
+    header #header nav {
+        display: none;
+    }
+
+    header #header .burger {
+        display: block;
+    }
+
+    header #header .burger button {
+        background: #ffffff;
+        border: none;
+        width: 30px;
+    }
+
+    header #header .burger nav {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+
+        /* Flex */
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+    }
+
+    header #header .burger nav ul {
+        width: 100%;
+        list-style: none;
+        align-items: center;
+    }
+
+    header #header .burger nav ul li {
+        background: #ffffff;
+        height: 30px;
+        
+        align-items: center;
+        justify-content: center;
+    }
+
+    header #header .burger nav ul li:hover {
+        background: #BDBDBD;
+    }
+
+    header #header .burger nav ul li a {
+        background: none;
+
+    }
+
 
     
 }
