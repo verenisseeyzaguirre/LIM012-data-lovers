@@ -1,5 +1,5 @@
 // importando las funciones de data.js
-import { medalists, sortData } from './data.js';
+import { medalists, sortData, athleteNameFilter } from './data.js';
 // importando la data con la que se trabaja
 import data from './data/atletas/atletas.js';
 // almacenando la data por objeto(atleta) en dataAtleas
@@ -8,6 +8,8 @@ const athletesData = data.atletas;
 const medalistsResult = medalists(athletesData);
 // ordena de mayor a menor por # de medallas el arrayMedallas(-1 es de mayor a menor y 1 vicev)
 const mostMedals = sortData(medalistsResult, -1);
+
+
 // funcion que MUESTRA 10 atletas ordenados por numero de medallas en Lista
 // 'listaAtletas' es el ID del UL en el HTML
 const athletesList = document.getElementById('athletesList');
@@ -20,7 +22,7 @@ const showMedalists = (array) => {
         
           <a class="num">${index + 1}</a>
           <a class="noc">${atleta.noc}</a>
-          <a class="name" id="nombreAtleta">${atleta.athleteName}</a>
+          <a class="name" id="${atleta.athleteName}">${atleta.athleteName}</a>
           <a class="sport">${atleta.disciplina.toUpperCase()}</a>
           <div class="medals">
             <a class="goldMedal">${atleta.medGold}</a>
@@ -35,7 +37,7 @@ const showMedalists = (array) => {
         
           <a class="num">${index + 1}</a>
           <a class="noc">${atleta.noc}</a>
-          <a class="name" id="nombreAtleta">${atleta.athleteName}</a>
+          <a class="name" id="${atleta.athleteName}">${atleta.athleteName}</a>
           <a class="sport">${atleta.disciplina.toUpperCase()}</a>
           <div class="medals">
             <a class="goldMedal">${atleta.medGold}</a>
@@ -51,32 +53,16 @@ const showMedalists = (array) => {
   return athletesRow;
 };
 
-/*
-const buscar = () => {
-  // const datoAtleta = { name: 'Matteo Bisiani', noc: 'ITA' };
-  // mostrarMedallistas(datoAtleta);
-  listaAtletas.innerHTML = 'pais nombre deporte y numero de medallas';
-  console.log('aun no hay funcion');
-};
-
-// Ejecutar la funcion de BUSCAR luego de presionar el boton
-const botonSearch = document.getElementById('btnSearch');
-botonSearch.addEventListener('click', buscar);
-*/
-
-// 'fichaAtleta' es el ID del UL en el HTML
+// 'estructura de fichaAtleta' es un ID del HTML
 const athleteFile = document.getElementById('athleteFile');
-const showAthlete = (array) => {
+const showAthlete = (atleta) => {
   let athleteInfo = '';
-  array.forEach((atleta, index) => {
-    if (index === 10) {
-      athleteInfo = `
-      <li>
+  athleteInfo = `
         <div class="whiteDiv">
           <div class="figure">
-            <img src="imagenes/flags/png/261-kiribati.png" width="100" alt="">
+            <img src="imagenes/flags/png/${atleta.noc}.png" width="100" alt="">
             <h2 class="name">${atleta.athleteName}</h2>
-            <p class="noc">${atleta.noc}</p> 
+            <p class="noc">${atleta.noc}</p>
           </div>
 
           <div>
@@ -125,12 +111,11 @@ const showAthlete = (array) => {
           </a>
           </div>
         </div>
-      </li>
+ 
       `;
-    }
-  });
   return athleteInfo;
 };
+
 const removeClassPerId = (id, clase) => {
   document.getElementById(id).classList.remove(clase);
 };
@@ -152,20 +137,35 @@ const orderMedals = () => {
     addClassPerId('athletePage', 'hide');
   }
 };
-// imprimiento el resultados de la fx, filasAtleta, en el HTML
-const showAthleteScreen = () => {
+// Pantalla FICHA ATLETA
+const showAthleteScreen = (athleteNameFromList) => {
   addClassPerId('medalsPage', 'hide');
-  athleteFile.innerHTML = showAthlete(mostMedals);
+  console.log('entro a ficha de atleta');
   removeClassPerId('header', 'hide');
   removeClassPerId('athletePage', 'hide');
+  addClassPerId('menu', 'hide');
+  // llamando a la funcion de data.js
+  const atheleteNameMedalist = athleteNameFilter(medalistsResult, athleteNameFromList);
+  athleteFile.innerHTML = showAthlete(atheleteNameMedalist);
 };
 
+// reconoce el clic en nombre de la lista en MEDALLAS para q se active la fx FICHA ATLETA
+const elementEventClic = () => {
+  const listAthlete = document.querySelectorAll('.list');
+  listAthlete.forEach(itemAthlete => itemAthlete.addEventListener('click', (event) => {
+    const athleteName = event.target.closest('.name').id;
+    console.log('entro a la funcion elementEventClic');
+    showAthleteScreen(athleteName);
+  }));
+};
 
-// imprimiento el resultados de la fx, filasAtleta, en el HTML
+// Pantalla MEDALLAS
 const showMedalsScreen = () => {
   addClassPerId('menu', 'hide');
-  // imprimiento el resultados de la fx, filasAtleta, en el HTML
+  // imprimiento el resultados de la fx, medalleros, en el HTML
   athletesList.innerHTML = showMedalists(mostMedals);
+  console.log('entro showMedalsScreen');
+  elementEventClic();
   // Ejecutar la funcion de ORDENAR luego de presionar el boton
   const orderButton = document.getElementById('btnOrder');
   orderButton.addEventListener('click', orderMedals);
@@ -173,18 +173,15 @@ const showMedalsScreen = () => {
   removeClassPerId('medalsPage', 'hide');
   addClassPerId('athletePage', 'hide');
 };
-// Ejecutar la funcion de para mostrarFicha Atleta luego de presionar el boton
-const searchButton = document.getElementById('btnSearch');
-searchButton.addEventListener('click', showAthleteScreen);
-// Ejecutar la funcion de para mostrar PAGE Medallas Atleta luego de presionar el boton
+
+// Ejecutar la funcion de para mostrar PAGE MEDALLAS
+const medalsButton1 = document.getElementById('btnMedallas1');
 const medalsButton = document.getElementById('btnMedallas');
+medalsButton1.addEventListener('click', showMedalsScreen);
 medalsButton.addEventListener('click', showMedalsScreen);
 
-/*
-// buscando imprimir ficha segun atleta
-const imprimirNombreAtleta = () => {
-console.log('atleta');
+const backMedalist = () => {
+  showMedalsScreen();
 };
-const nombreFichaAtleta = document.getElementsById('nombreAtleta');
-nombreFichaAtleta.addEventListener('click', imprimirNombreAtleta);
-*/
+const backButton = document.getElementById('back');
+backButton.addEventListener('click', backMedalist);

@@ -16,7 +16,7 @@
                     <h1>JUEGOS OLÍMPICOS</h1>
                     <p class="category">CATEGORIAS</p>
                     <nav>
-                        <a>
+                        <a id="btnAtletas">
                           <p>ATLETAS</p>
                           <div class="lightBlue">
                             <img src="imagenes/button icons/012-jogging.png" width="70">
@@ -60,8 +60,8 @@
                   </section>
 
                   <nav>
-                      <a>ATLETAS</a>
-                      <a id="btnMedallas">MEDALLAS</a>
+                      <a id="btnAtletas1">ATLETAS</a>
+                      <a id="btnMedallas1">MEDALLAS</a>
                       <a>DISCIPLINAS</a>
                       <a>TEMPORADAS</a>
                       <a>PAÍSES</a>
@@ -70,6 +70,7 @@
             </header>
 
             <main>
+
               <section id="medalsPage" class="hide">
                 <form>
                   <input type="text" placeholder="Buscar...">
@@ -90,21 +91,19 @@
                         <img src="imagenes/header and main icons/013-arrows-1.png" width="20" alt="">
                       </button>
                     </a>
-                  <!--</div>-->                 
-                  
+                  <!--</div>  athletesList-->                                   
                 </div>
-                <div class="list" id="athletesList">
-                </div>    
+                <div id="modal"></div>
+                <div id="athletesList" class="list"></div>    
               </section>
                     
               <section id="athletePage" class="hide">
                 <button id="back">
                   <img src="imagenes/header and main icons/back-arrow.png" width="40" alt="">
                 </button>
-                
-                <ul id="athleteFile">
-                </ul>
-              </section>    
+                <div id="athleteFile"></div>
+              </section>
+
             </main>
             <footer>
             </footer>
