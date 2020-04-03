@@ -7,7 +7,7 @@ const athletesData = data.atletas;
 // ejecuta la fx medallistas con dataAtletas, se guarda en la var. resultadoMedallistas lo q retorna
 const medalistsResult = medalists(athletesData);
 // ordena de mayor a menor por # de medallas el arrayMedallas(-1 es de mayor a menor y 1 vicev)
-const mostMedals = sortData(medalistsResult, -1);
+const mostMedals = sortData(medalistsResult, 'total', -1);
 
 
 // funcion que MUESTRA 10 atletas ordenados por numero de medallas en Lista
@@ -127,12 +127,12 @@ let press = 0;
 const orderMedals = () => {
   if (press === 0) {
     press = 1;
-    const lessMedals = sortData(medalistsResult, 1);
+    const lessMedals = sortData(medalistsResult, 'total', 1);
     athletesList.innerHTML = showMedalists(lessMedals);
     addClassPerId('athletePage', 'hide');
   } else if (press === 1) {
     press = 0;
-    const invertMedals = sortData(medalistsResult, -1);
+    const invertMedals = sortData(medalistsResult, 'total', -1);
     athletesList.innerHTML = showMedalists(invertMedals);
     addClassPerId('athletePage', 'hide');
   }

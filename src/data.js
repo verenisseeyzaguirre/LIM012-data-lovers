@@ -41,9 +41,9 @@ export const medalists = (arrAthletes) => {
 };
 
 // funcion para ordenar
-export const sortData = (data, sortOrder) => {
+export const sortData = (data, sortBy, sortOrder) => {
   const orderedData = data.sort((a, b) => {
-    if (a.total > b.total) {
+    if (a[sortBy] > b[sortBy]) {
       return sortOrder;
     }
     return -sortOrder;
