@@ -56,3 +56,9 @@ export const athleteNameFilter = (arrAthletes, nombre) => {
   const objetoEncontrado = arrAthletes.filter(medallero => (medallero.athleteName === nombre))[0];
   return objetoEncontrado;
 };
+
+//  funcion para encontrar elemento
+export const searchText = (data, property, condition) => {
+  const searchAthlete = data.filter(element => (element[property]).indexOf(condition) !== -1);
+  return searchAthlete;
+};

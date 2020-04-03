@@ -1,5 +1,7 @@
 // importando las funciones de data.j
-import { medalists, sortData, athleteNameFilter } from './data.js';
+import {
+  medalists, sortData, athleteNameFilter, searchText,
+} from './data.js';
 // importando la data con la que se trabaja
 import data from './data/atletas/atletas.js';
 // almacenando la data por objeto(atleta) en dataAtleas
@@ -185,3 +187,16 @@ const backMedalist = () => {
 };
 const backButton = document.getElementById('back');
 backButton.addEventListener('click', backMedalist);
+
+// pintar los elementos encontrados
+const inputText = document.getElementById('inputText');
+inputText.addEventListener('keyup', () => {
+  const inputTextAth = inputText.value;
+  const listAthleteFinded = searchText(medalistsResult, 'athleteName', inputTextAth);
+  athletesList.innerHTML = showMedalists(listAthleteFinded);
+  if (athletesList.innerHTML === '') {
+    athletesList.innerHTML = `
+      <p> Ningún atleta coincide con tu búsqueda</p>
+    `;
+  }
+});
