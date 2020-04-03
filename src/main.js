@@ -41,7 +41,7 @@ const showMedalists = (array) => {
             <a class="goldMedal">${atleta.medGold}</a>
             <a class="silverMedal">${atleta.medSilver}</a>
             <a class="bronzeMedal">${atleta.medBronze}</a>  
-          </div>
+          </div>  
           <div class="total grey">
             <a class="totalMedals">${atleta.total}</a>  
             <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
@@ -154,6 +154,7 @@ const orderMedals = () => {
     addClassPerId('athletePage', 'hide');
   }
 };
+
 // imprimiento el resultados de la fx, filasAtleta, en el HTML
 const showAthleteScreen = () => {
   addClassPerId('medalsPage', 'hide');
@@ -161,7 +162,6 @@ const showAthleteScreen = () => {
   removeClassPerId('header', 'hide');
   removeClassPerId('athletePage', 'hide');
 };
-
 
 // imprimiento el resultados de la fx, filasAtleta, en el HTML
 const showMedalsScreen = () => {
@@ -175,6 +175,7 @@ const showMedalsScreen = () => {
   removeClassPerId('medalsPage', 'hide');
   addClassPerId('athletePage', 'hide');
 };
+
 // Ejecutar la funcion de para mostrarFicha Atleta luego de presionar el boton
 const searchButton = document.getElementById('btnSearch');
 searchButton.addEventListener('click', showAthleteScreen);
