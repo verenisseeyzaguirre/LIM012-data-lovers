@@ -1,4 +1,4 @@
-// importando las funciones de data.js
+// importando las funciones de data.j
 import { medalists, sortData, athleteNameFilter } from './data.js';
 // importando la data con la que se trabaja
 import data from './data/atletas/atletas.js';
