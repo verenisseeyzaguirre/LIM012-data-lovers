@@ -18,34 +18,36 @@ const showMedalists = (array) => {
   array.forEach((atleta, index) => {
     if (index < 10) {
       if (index % 2 === 0) {
-        athletesRow += `
-        
-          <a class="num">${index + 1}</a>
-          <a class="noc">${atleta.noc}</a>
-          <a class="name" id="${atleta.athleteName}">${atleta.athleteName}</a>
-          <a class="sport">${atleta.disciplina.toUpperCase()}</a>
-          <div class="medals">
+        athletesRow += `        
+          <a class="num white">${index + 1}</a>
+          <a class="noc white">${atleta.noc}</a>
+          <a class="name white" id="${atleta.athleteName}">${atleta.athleteName}</a>
+          <a class="sport white">${atleta.disciplina.toUpperCase()}</a>
+          <div class="medals white">
             <a class="goldMedal">${atleta.medGold}</a>
             <a class="silverMedal">${atleta.medSilver}</a>
             <a class="bronzeMedal">${atleta.medBronze}</a>  
           </div>
-          <a class="total">${atleta.total}</a>
-          
+          <div class="total white">
+            <a class="totalMedals">${atleta.total}</a>  
+            <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
+          </div>
       `;
       } else {
         athletesRow += `
-        
-          <a class="num">${index + 1}</a>
-          <a class="noc">${atleta.noc}</a>
-          <a class="name" id="${atleta.athleteName}">${atleta.athleteName}</a>
-          <a class="sport">${atleta.disciplina.toUpperCase()}</a>
-          <div class="medals">
+          <a class="num grey">${index + 1}</a>
+          <a class="noc grey">${atleta.noc}</a>
+          <a class="name grey" id="${atleta.athleteName}">${atleta.athleteName}</a>
+          <a class="sport grey">${atleta.disciplina.toUpperCase()}</a>
+          <div class="medals grey">
             <a class="goldMedal">${atleta.medGold}</a>
             <a class="silverMedal">${atleta.medSilver}</a>
             <a class="bronzeMedal">${atleta.medBronze}</a>  
-          </div>
-          <a class="total">${atleta.total}</a>
-          
+          </div>  
+          <div class="total grey">
+            <a class="totalMedals">${atleta.total}</a>  
+            <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
+          </div>          
       `;
       }
     }
