@@ -50,3 +50,9 @@ export const sortData = (data, sortOrder) => {
   });
   return orderedData;
 };
+
+// funcion para filtrar por nombre el .athleteName proviene de medalist
+export const athleteNameFilter = (arrAthletes, nombre) => {
+  const objetoEncontrado = arrAthletes.filter(medallero => (medallero.athleteName === nombre))[0];
+  return objetoEncontrado;
+};

@@ -1,4 +1,3 @@
-/* El selector universal */
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +5,17 @@
     font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
-/* Vuelve flexibles a todos sus hijos */
+.hide {
+    display: none;
+  }
+
 
 .container {
     background: #ffffff;
     width: 90%;
     max-width: 1000px;
     margin: auto;
+
     /* Flex */
     display: flex;
     flex-direction: row;
@@ -23,12 +26,11 @@ body {
     background: #ffffff;
 }
 
-/* Sección de la etiqueta header */
-
 header {
     background: #ffffff;
     width: 100%;
     padding: 20px;
+
     /* Flex */
     display: flex;
     align-items: center;
@@ -36,7 +38,7 @@ header {
     flex-wrap: wrap;
 }
 
-/* Menú Inicial section id="menu" */
+/* section id="menu" */
 
 header #menu {
     width: 80%;
@@ -58,6 +60,7 @@ header #menu .category {
 
 header #menu nav {
     width: 100%;
+
     /* Flex */
     display: flex;
     flex-wrap: wrap;
@@ -70,6 +73,7 @@ header #menu nav a {
     text-align: center;
     text-decoration: none;
     padding: 10px;
+
     /* Flex */
     flex-grow: 1;
     display: flex;
@@ -81,6 +85,7 @@ header #menu nav a {
 header #menu nav a p {
     font-size: 12px;
     margin: 10px;
+
 }
 
 header #menu nav a div {
@@ -98,33 +103,40 @@ header #menu nav a div {
 
 header #menu nav a .lightBlue {
     border: solid 8px #00b6bd;
+    
 }
 
 header #menu nav a .lightBlue:hover {
     border: solid 8px #00dbcd;
     background: #00dbcd;
+    
 }
 
 header #menu nav a .darkBlue {
     border: solid 8px #005457;
+    
 }
 
 header #menu nav a .darkBlue:hover {
     border: solid 8px #007175;
     background: #007175;
+    
 }
 
 header #menu nav a .pink {
     border: solid 8px #fd0f81;
+    
 }
 
 header #menu nav a .pink:hover {
     border: solid 8px #ff73b0;
     background: #ff73b0;
+    
 }
 
 header #menu nav a .yellow {
     border: solid 8px #ff9811;
+    
 }
 
 header #menu nav a .yellow:hover {
@@ -144,7 +156,7 @@ header #menu nav a .green:hover {
     
 }
 
-/* Header general section id="header" */
+/* section id="header" */
 
 header #header {
     width: 100%;
@@ -173,6 +185,7 @@ header #header .logo a {
 
 header #header nav {
     width: 100%;
+
     /* Flex */
     display: flex;
     flex-wrap: wrap;
@@ -186,24 +199,25 @@ header #header nav a {
     text-decoration: none;
     padding: 10px;
     border-right: 1px solid #D3D3D3;
+
     /* Flex */
     flex-grow: 1;
 }
 
 header #header nav a:nth-last-child(1) {
     border-right: none; 
+
 }
 
 header #header nav a:hover {
     background: #D3D3D3;
 }
 
-/* Sección de la etiqueta main */
-
 main {
     background: #ffffff;
     padding: 20px;
     width: 100%;
+
     /* Flex */
     display: flex;
     align-items: center;
@@ -214,6 +228,7 @@ main {
 
 main section {
     width: 80%;
+
     /* Flex */
     display: flex;
     flex-direction: column;
@@ -223,12 +238,11 @@ main section {
 
 /* section id="medalsPage" */
 
-/* Buscador */
-
 main #medalsPage form {
     width: 50%;
     border-bottom: 2px solid #333333;
     padding: 3px;
+    
     /* Flex */
     display: flex;
     flex-direction: row;
@@ -242,6 +256,7 @@ main #medalsPage form input {
     border: none;
     height: 20px;
     width: 100%;
+    
 }
 
 main #medalsPage form button {
@@ -257,47 +272,36 @@ main #medalsPage button {
     cursor: pointer;
 }
 
-/* Titulo MEDALLAS */
-
 main #medalsPage .title {
     padding: 20px;
     
 }
 
-/* cabecera de ista de medalleros */
+/* div class="medalsList" */
 
 main #medalsPage .medalsList {
     width: 100%;
     
-    /* grid */
+    /* flex */
     
     display: grid;
-    grid-template-columns: 30px 50px 320px auto 105px 40px;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1;
 }
 
-main #medalsPage .medalsList {
-    text-align: start;
-}
-
-main #medalsPage .medalsList h3 {
-    border-bottom: 2px solid #333333;
-}
-
-/* Lista de medalleros */
+/* main #medalsPage .medalsList .header {
+    grid-column: 1 / 7;
+}*/
 
 main #medalsPage .list {
     width: 100%;
     
-    /* grid */
+    /* flex */
     
     display: grid;
-    grid-template-columns: 30px 50px 320px auto 105px 40px;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(10, auto);
-}
 
-main #medalsPage .list {
-    text-align: start;
 }
 
 main #medalsPage .list .num {
@@ -332,18 +336,114 @@ main #medalsPage .medalsList a {
     padding: 5px;
 }
 
-/* Fondo lista de medaleros */
+/* section id="athletePage" */
+
+main #athletePage button {
+    background: #ffffff;
+    width: 20px;
+    border: none;
+    cursor: pointer;
+    justify-self: left;
+}
+
+main #athletePage ul {
+    list-style: none;
+
+}
+
+main #athletePage ul li {
+    padding: 5px;
+    width: 100%;
+
+    /* Flex */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main #athletePage ul li div {
+    width: 100%;
+    padding: 20px;
+}
+
+main #athletePage ul li .whiteDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+main #athletePage ul li .whiteDiv .figure {
+    font-size: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+main #athletePage ul li .greyDiv {
+    background: #F2F2F2;
+    
+    /* Flex */
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main #athletePage ul li .greyDiv div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+
+main #athletePage ul li .greyDiv div a {
+    padding: 5px;
+    margin: 5px;
+}
+
+#data {
+    background: #e9ecf4;
+    padding: 5px;
+}
+
+.bandera {
+    width: 5%;
+}
 
 .grey {
     background: #F2F2F2;
+    height: 55px;
+    padding-top: 3px;
+    padding-bottom: 3px; 
 }
 
 .white {
     background:white;
+    height: 55px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
+.noc {
+    color: green;
+    width: 200px;
+}
 
-/* íconos de medallas y total de medallas */
+.name {
+    width: 200px;
+}
+
+.disciplina {
+    color:blue;
+    width: 200px;
+}
 
 .goldMedal {
     width: 30px;
@@ -353,7 +453,7 @@ main #medalsPage .medalsList a {
     font-weight: bold;
     font-size: 12px;
     background: #F2C94C;
-    margin: 5px;
+    margin-right: 5px;
 }
 
 .silverMedal {
@@ -364,7 +464,7 @@ main #medalsPage .medalsList a {
     font-weight: bold;
     font-size: 12px;
     background: #BDBDBD;
-    margin: 5px;
+    margin-right: 5px;
 }
 
 .bronzeMedal {
@@ -375,15 +475,15 @@ main #medalsPage .medalsList a {
     font-weight: bold;
     font-size: 12px;
     background: #E4954B;
-    margin: 5px;
+    margin-right: 5px;
 }
 
-.total {
+.totalMedals  {
     position: relative;
 }
 
-
-.totalMedals {
+/*
+.total {
     position: absolute;
     width: 30px;
 	height: 30px;
@@ -396,24 +496,13 @@ main #medalsPage .medalsList a {
     font-weight: bold;
     font-size: 12px;
 }
+*/
 
 
 .laurel {
     vertical-align: top;
     opacity: 0.8;
 }
-
-/* section id="athletePage" */
-
-/* items ocultos */
-
-.burger {
-    display: none;
-}
-
-.hide {
-    display: none;
-  }
 
 
 /* Responsive */
@@ -423,8 +512,8 @@ main #medalsPage .medalsList a {
     .container {
         background: #ffffff;
         width: 100%;
-        max-width: 768px
-        margin: auto; 
+        margin: auto;
+    
         /* Flex */
         display: flex;
         flex-direction: row;
@@ -433,6 +522,7 @@ main #medalsPage .medalsList a {
 
     header #menu nav {
         width: 100%;
+    
         /* Flex */
         display: flex;
         flex-wrap: wrap;
@@ -441,6 +531,7 @@ main #medalsPage .medalsList a {
 
     header #menu nav a p {
         display: none;
+    
     }
 
     header #menu h1 {
@@ -477,66 +568,6 @@ main #medalsPage .medalsList a {
     header #menu nav a div img {
         width: 30px;
     }
-
-    header #header nav {
-        display: none;
-    }
-
-    /* Burger menu */
-
-    header #header .burger {
-        display: block;
-    }
-
-    header #header .burger button {
-        background: #ffffff;
-        border: none;
-        width: 30px;
-    }
-
-    header #header .burger nav {
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        transform: translate(-50%, -50%);
-
-        /* Flex */
-        display: flex;
-        flex-direction: column;
-        justify-content: stretch;
-    }
-
-    header #header .burger nav ul {
-        width: 100%;
-        list-style: none;
-        align-items: center;
-    }
-
-    header #header .burger nav ul li {
-        background: #ffffff;
-        height: 30px;
-        
-        align-items: center;
-        justify-content: center;
-    }
-
-    header #header .burger nav ul li:hover {
-        background: #BDBDBD;
-    }
-
-    header #header .burger nav ul li a {
-        background: none;
-
-    }
-
-    .enabledMenu {
-        display: block;
-    }
-
-    .disabledMenu {
-        display: none;
-    }
-
 
     
 }
