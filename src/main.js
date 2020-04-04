@@ -30,7 +30,6 @@ const showMedalists = (array) => {
           </div>
           <div class="total white">
             <a class="totalMedals">${atleta.total}</a>  
-            <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
           </div>
       `;
       } else {
@@ -45,8 +44,7 @@ const showMedalists = (array) => {
             <a class="bronzeMedal">${atleta.medBronze}</a>  
           </div>  
           <div class="total grey">
-            <a class="totalMedals">${atleta.total}</a>  
-            <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
+            <a class="totalMedals">${atleta.total}</a>
           </div>          
       `;
       }
@@ -73,7 +71,6 @@ const showAthlete = (atleta) => {
             <a class="bronzeMedal">${atleta.medBronze}<a>
             <div class="totalMedals">
               <a class="total">${atleta.total}</a>
-              <img class="laurel" src="imagenes/header and main icons/002-laurel.png" width="45">
             </div>
           </div>
         </div>
