@@ -94,12 +94,12 @@ const showAthlete = (atleta) => {
           <div class="secondRow">
             <a>
               <h3>ALTURA</h3>
-              <p>${atleta.height}</p>
+              <p>${atleta.height}cm</p>
             </a>
             
             <a>
               <h3>PESO</h3>
-              <p>${atleta.weight}</p>
+              <p>${atleta.weight}kg</p>
             </a>
             
             <a>

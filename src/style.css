@@ -28,43 +28,73 @@ body {
 header {
     background: #ffffff;
     width: 100%;
-    padding: 20px;
+   
     /* Flex */
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
 /* Menú Inicial section id="menu" */
 
-header #menu {
+header #menu .menuGrid {
     width: 80%;
-
+    /* grid */
+    display: grid;
+    grid-template-columns: repeat(5, 125px);
+    grid-template-rows: 185px 240px 185px;
 }
 
-header #menu h1 {
+header #menu .menuGrid h1 {
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
     color: #333333;
     font-size: 50px;
     text-align: center;
     line-height: 70px;
     font-weight: bolder;
     padding: 10px;
+    align-self: center;
 }
 
-header #menu .category {
+header #menu .menuGrid .category {
     display: none;
 }
 
-header #menu nav {
-    width: 100%;
-    /* Flex */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+header #menu .menuGrid #btnMedallas {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    align-self: end;
 }
 
-header #menu nav a {
+header #menu .menuGrid #btnSports {
+    align-self: start;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+header #menu .menuGrid #btnAtletas {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+    align-self: start;
+}
+
+header #menu .menuGrid #btnSeasons {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+    align-self: start;
+}
+
+header #menu .menuGrid #btnCountry {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    align-self: start;
+}
+
+
+header #menu .menuGrid a {
     background: #ffffff;
     color: #333333;
     text-align: center;
@@ -78,12 +108,12 @@ header #menu nav a {
     justify-content: center;
 }
 
-header #menu nav a p {
+header #menu .menuGrid a p {
     font-size: 12px;
     margin: 10px;
 }
 
-header #menu nav a div {
+header #menu .menuGrid a div {
     background: #ffffff;
     width: 120px;
 	height: 120px;
@@ -96,49 +126,49 @@ header #menu nav a div {
     justify-content: center;
 }
 
-header #menu nav a .lightBlue {
+header #menu .menuGrid a .lightBlue {
     border: solid 8px #00b6bd;
 }
 
-header #menu nav a .lightBlue:hover {
+header #menu .menuGrid a .lightBlue:hover {
     border: solid 8px #00dbcd;
     background: #00dbcd;
 }
 
-header #menu nav a .darkBlue {
+header #menu .menuGrid a .darkBlue {
     border: solid 8px #005457;
 }
 
-header #menu nav a .darkBlue:hover {
+header #menu .menuGrid a .darkBlue:hover {
     border: solid 8px #007175;
     background: #007175;
 }
 
-header #menu nav a .pink {
+header #menu .menuGrid a .pink {
     border: solid 8px #fd0f81;
 }
 
-header #menu nav a .pink:hover {
+header #menu .menuGrid a .pink:hover {
     border: solid 8px #ff73b0;
     background: #ff73b0;
 }
 
-header #menu nav a .yellow {
+header #menu .menuGrid a .yellow {
     border: solid 8px #ff9811;
 }
 
-header #menu nav a .yellow:hover {
+header #menu .menuGrid a .yellow:hover {
     border: solid 8px #ffcd00;
     background: #ffcd00;
     
 }
 
-header #menu nav a .green {
+header #menu .menuGrid a .green {
     border: solid 8px #4cba68;
     
 }
 
-header #menu nav a .green:hover {
+header #menu .menuGrid a .green:hover {
     border: solid 8px #91dc5a;
     background: #91dc5a;
     
@@ -307,18 +337,35 @@ main #medalsPage .list {
 
 main #medalsPage .list .num {
     grid-column: 1 / 2;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 12px;
 }
 
 main #medalsPage .list .noc {
     grid-column: 2 / 3;
+    font-weight: bold;
+    color: #333333;
+    font-size: 14px;
 }
 
 main #medalsPage .list .name {
     grid-column: 3 / 4;
+    font-weight: 300;
+}
+
+main #medalsPage .list .name:hover {
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 main #medalsPage .list .sport {
     grid-column: 4 / 5;
+    font-weight: bold;
+    color: #333333;
+    font-size: 14px;
+    padding-top: 12px;
 }
 
 main #medalsPage .list .medals {
