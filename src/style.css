@@ -433,8 +433,7 @@ main #medalsPage .list .total .totalMedals {
     .container {
         background: #ffffff;
         width: 100%;
-        max-width: 768px
-        margin: auto; 
+        max-width: 768px;
         /* Flex */
         display: flex;
         flex-direction: row;
@@ -509,7 +508,6 @@ main #medalsPage .list .total .totalMedals {
         margin: auto;
         text-align: center;
         transform: translate(-50%, -50%);
-
         /* Flex */
         display: flex;
         flex-direction: column;
@@ -545,8 +543,5 @@ main #medalsPage .list .total .totalMedals {
 
     .disabledMenu {
         display: none;
-    }
-
-
-    
+    }  
 }
