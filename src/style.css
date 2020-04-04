@@ -269,7 +269,7 @@ main #medalsPage .medalsList {
     width: 100%;
     /* grid */
     display: grid;
-    grid-template-columns: 30px 50px 300px 230.75px 105px 50px;
+    grid-template-columns: 30px 50px 280px 250.75px 105px 50px;
     grid-template-rows: 1;
 }
 
@@ -290,7 +290,7 @@ main #medalsPage .list {
     width: 100%;
     /* grid */
     display: grid;
-    grid-template-columns: 30px 50px 300px 230.75px 105px 50px;
+    grid-template-columns: 30px 50px 280px 250.75px 105px 50px;
     grid-template-rows: repeat(10, auto);
 }
 
@@ -329,7 +329,7 @@ main #medalsPage .list .total {
     grid-column: 6 / 7;
 }
 
-/* Fondo lista de medaleros */
+/* Fondo lista de medalleros */
 
 main #medalsPage .list .grey {
     background: #F2F2F2;
@@ -414,6 +414,155 @@ main #medalsPage .list .total .totalMedals {
 
 
 /* section id="athletePage" */
+
+main #athletePage {
+    margin: auto;
+}
+
+main #athletePage #back {
+    background: #ffffff;
+    border: none;
+    width: 50px;
+    text-align: left;
+}
+
+main #athletePage #athleteFile {
+    width: 100%;
+    /* Flex */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
+    justify-content: center;
+}
+
+
+main #athletePage #athleteFile .whiteDiv {
+    width: 100%;
+    padding: 15px;
+    background: #ffffff;
+    /* Grid */
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: repeat(2 1fr);
+}
+
+main #athletePage #athleteFile .whiteDiv img {
+    width: 200px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    justify-self: end;
+    padding: 10px;
+}
+
+main #athletePage #athleteFile .whiteDiv .nameNoc {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding: 10px;
+    align-self: end;
+}
+
+main #athletePage #athleteFile .whiteDiv .prizes {
+    grid-column: 2 / 3;
+    grid-row-end: 2 / 3;
+    width: 70%;
+    padding: 10px;
+    /* flex */
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+main #athletePage #athleteFile .whiteDiv .prizes .goldMedal {
+    width: 40px;
+	height: 40px;
+    border-radius: 50%;
+    color: #333333;
+    font-weight: bold;
+    font-size: 20px;
+    background: #F2C94C;
+    margin: 3px;
+    padding: 0;
+    padding-top: 7px;
+}
+
+main #athletePage #athleteFile .whiteDiv .prizes .silverMedal {
+    width: 40px;
+	height: 40px;
+    border-radius: 50%;
+    color: #333333;
+    font-weight: bold;
+    font-size: 20px;
+    background: #BDBDBD;
+    margin: 3px;
+    padding: 0;    
+    padding-top: 7px;
+}
+
+main #athletePage #athleteFile .whiteDiv .prizes .bronzeMedal {
+    width: 40px;
+	height: 40px;
+    border-radius: 50%;
+    color: #333333;
+    font-weight: bold;
+    font-size: 20px;
+    background: #E4954B;
+    margin: 3px;
+    padding: 0;
+    padding-top: 7px;
+}
+
+main #athletePage #athleteFile .whiteDiv .prizes .totalMedals {
+    width: 55px;
+	height: 55px;
+    background-image: url("imagenes/header and main icons/002-laurel.png");
+    background-size: 55px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333333;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+
+main #athletePage #athleteFile .greyDiv {
+    width: 100%;
+    padding: 15px;
+    background: #F2F2F2;
+    /* Flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #athletePage #athleteFile .greyDiv .firstRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+main #athletePage #athleteFile .greyDiv .firstRow a {
+    padding: 10px;
+}
+
+main #athletePage #athleteFile .greyDiv .secondRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+main #athletePage #athleteFile .greyDiv .secondRow a {
+    padding: 10px;
+}
 
 /* items ocultos */
 
@@ -507,7 +656,6 @@ main #medalsPage .list .total .totalMedals {
         width: 100%;
         margin: auto;
         text-align: center;
-        transform: translate(-50%, -50%);
         /* Flex */
         display: flex;
         flex-direction: column;

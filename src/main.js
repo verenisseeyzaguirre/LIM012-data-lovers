@@ -59,55 +59,53 @@ const showAthlete = (atleta) => {
   let athleteInfo = '';
   athleteInfo = `
         <div class="whiteDiv">
-          <div class="figure">
-            <img src="imagenes/flags/png/${atleta.noc}.png" width="100" alt="">
+          <img src="imagenes/flags/png/${atleta.noc}.png" width="100" alt="">
+          <div class="nameNoc">
             <h2 class="name">${atleta.athleteName}</h2>
             <p class="noc">${atleta.noc}</p>
           </div>
 
-          <div>
-            <a class="goldMedal">${atleta.medGold}<a>
-            <a class="silverMedal">${atleta.medSilver}<a>
-            <a class="bronzeMedal">${atleta.medBronze}<a>
-            <div class="totalMedals">
-              <a class="total">${atleta.total}</a>
-            </div>
+          <div class="prizes">
+            <a class="goldMedal">${atleta.medGold}</a>
+            <a class="silverMedal">${atleta.medSilver}</a>
+            <a class="bronzeMedal">${atleta.medBronze}</a>  
+            <a class="totalMedals">${atleta.total}</a>
           </div>
         </div>
         
         <div class="greyDiv">
-        <div>
-          <a>
-            <h3>DEPORTE</h3>
-            <p>${atleta.disciplina.toUpperCase()}</p>
-          </a>
-          
-          <a>
-            <h3>FECHA DE NACIMIENTO</h3>
-            <p>${atleta.birth}</p>
-          </a>
-          
-          <a>
-            <h3>JUEGOS OLÍMPICOS</h3>
-            <p>${atleta.game}</p>
-          </a>
+          <div class="firstRow">
+            <a>
+              <h3>DEPORTE</h3>
+              <p>${atleta.disciplina.toUpperCase()}</p>
+            </a>
+            
+            <a>
+              <h3>FECHA DE NACIMIENTO</h3>
+              <p>${atleta.birth}</p>
+            </a>
+            
+            <a>
+              <h3>JUEGOS OLÍMPICOS</h3>
+              <p>${atleta.game}</p>
+            </a>
           </div>
 
-          <div>
-          <a>
-            <h3>ALTURA</h3>
-            <p>${atleta.height}</p>
-          </a>
-          
-          <a>
-            <h3>PESO</h3>
-            <p>${atleta.weight}</p>
-          </a>
-          
-          <a>
-            <h3>SEXO</h3>
-            <p>${atleta.gender}</p>
-          </a>
+          <div class="secondRow">
+            <a>
+              <h3>ALTURA</h3>
+              <p>${atleta.height}</p>
+            </a>
+            
+            <a>
+              <h3>PESO</h3>
+              <p>${atleta.weight}</p>
+            </a>
+            
+            <a>
+              <h3>SEXO</h3>
+              <p>${atleta.gender}</p>
+            </a>
           </div>
         </div>
  
