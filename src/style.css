@@ -62,7 +62,7 @@ header #menu .menuGrid .category {
     display: none;
 }
 
-header #menu .menuGrid #btnMedallas {
+header #menu .menuGrid #btnMedals {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     align-self: end;
@@ -74,7 +74,7 @@ header #menu .menuGrid #btnSports {
     grid-row: 2 / 3;
 }
 
-header #menu .menuGrid #btnAtletas {
+header #menu .menuGrid #btnAthletes {
     grid-column: 5 / 6;
     grid-row: 2 / 3;
     align-self: start;
@@ -692,13 +692,13 @@ header #header .logo button {
         align-self: end;
     }
 
-    header #menu .menuGrid #btnMedallas {
+    header #menu .menuGrid #btnMedals {
         grid-column: 5 / 7;
         grid-row: 3 / 4;
         align-self: end;
     }
     
-    header #menu .menuGrid #btnAtletas {
+    header #menu .menuGrid #btnAthletes {
         grid-column: 7 / 9;
         grid-row: 3 / 4;
         align-self: end;

@@ -34,10 +34,10 @@ const showMedalists = (array) => {
       `;
       } else {
         athletesRow += `
-        <a class="num grey"><img src="imagenes/flags/png/${atleta.noc}.png" width="20" alt=""></a>
-        <a class="noc grey">${atleta.noc}</a>
-        <a class="name grey" id="${atleta.athleteName}">${atleta.athleteName}</a>
-        <a class="sport grey">${atleta.disciplina.toUpperCase()}</a>          
+          <a class="num grey"><img src="imagenes/flags/png/${atleta.noc}.png" width="20" alt=""></a>
+          <a class="noc grey">${atleta.noc}</a>
+          <a class="name grey" id="${atleta.athleteName}">${atleta.athleteName}</a>
+          <a class="sport grey">${atleta.disciplina.toUpperCase()}</a>          
           <div class="medals grey">
             <a class="goldMedal">${atleta.medGold}</a>
             <a class="silverMedal">${atleta.medSilver}</a>
@@ -169,9 +169,9 @@ const showMedalsScreen = () => {
 };
 
 // Ejecutar la funcion de para mostrar PAGE MEDALLAS
-const medalsButton = document.getElementById('btnMedallas');
-const medalsButton1 = document.getElementById('btnMedallas1');
-const medalsButton2 = document.getElementById('btnMedallas2');
+const medalsButton = document.getElementById('btnMedals');
+const medalsButton1 = document.getElementById('btnMedals1');
+const medalsButton2 = document.getElementById('btnMedals2');
 medalsButton.addEventListener('click', showMedalsScreen);
 medalsButton1.addEventListener('click', showMedalsScreen);
 medalsButton2.addEventListener('click', showMedalsScreen);
