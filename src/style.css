@@ -632,7 +632,7 @@ header #header .logo button {
 
 /* Responsive */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 450px) {
 
     .container {
         background: #ffffff;
