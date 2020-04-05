@@ -19,10 +19,10 @@ const showMedalists = (array) => {
     if (index < 10) {
       if (index % 2 === 0) {
         athletesRow += `        
-          <a class="num white">${index + 1}</a>
+          <a class="num white"><img src="imagenes/flags/png/${atleta.noc}.png" width="20" alt=""></a>
           <a class="noc white">${atleta.noc}</a>
           <a class="name white" id="${atleta.athleteName}">${atleta.athleteName}</a>
-          <a class="sport white">${atleta.disciplina.toUpperCase()}</a>
+          <a class="sport white">${atleta.disciplina.toUpperCase()}</a>  
           <div class="medals white">
             <a class="goldMedal">${atleta.medGold}</a>
             <a class="silverMedal">${atleta.medSilver}</a>
@@ -34,10 +34,10 @@ const showMedalists = (array) => {
       `;
       } else {
         athletesRow += `
-          <a class="num grey">${index + 1}</a>
-          <a class="noc grey">${atleta.noc}</a>
-          <a class="name grey" id="${atleta.athleteName}">${atleta.athleteName}</a>
-          <a class="sport grey">${atleta.disciplina.toUpperCase()}</a>
+        <a class="num grey"><img src="imagenes/flags/png/${atleta.noc}.png" width="20" alt=""></a>
+        <a class="noc grey">${atleta.noc}</a>
+        <a class="name grey" id="${atleta.athleteName}">${atleta.athleteName}</a>
+        <a class="sport grey">${atleta.disciplina.toUpperCase()}</a>          
           <div class="medals grey">
             <a class="goldMedal">${atleta.medGold}</a>
             <a class="silverMedal">${atleta.medSilver}</a>
@@ -45,7 +45,7 @@ const showMedalists = (array) => {
           </div>  
           <div class="total grey">
             <a class="totalMedals">${atleta.total}</a>
-          </div>          
+          </div>
       `;
       }
     }
@@ -182,3 +182,24 @@ const backMedalist = () => {
 };
 const backButton = document.getElementById('back');
 backButton.addEventListener('click', backMedalist);
+
+// función mostrar ocultar menú del botón burguer
+const btnBurger = document.getElementById('btnBurger');
+
+const showMenu = () => {
+  console.log("entro");
+  const burgerMenu = document.getElementById('optionsMenu');
+  if (burgerMenu.classList.contains('disabledMenu')) {
+    console.log("mostrar");
+    burgerMenu.classList.remove('disabledMenu');
+    burgerMenu.classList.add('enabledMenu');
+  }
+  else {
+    console.log("ocultar");
+    burgerMenu.classList.remove('enabledMenu');
+    burgerMenu.classList.add('disabledMenu');
+  }
+
+}
+
+btnBurger.addEventListener('click', showMenu);
