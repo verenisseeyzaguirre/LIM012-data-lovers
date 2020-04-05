@@ -757,6 +757,10 @@ header #header .logo button {
 
     /* Ocultar nav de menu header */
     
+    header #header {
+        z-index: 3;
+    }
+
     header #header .nav {
         display: none;
     }
@@ -821,6 +825,7 @@ header #header .logo button {
     }
 
     header #header .burger nav ul {
+        position: absolute;
         width: 100%;
         list-style: none;
         align-items: center;
