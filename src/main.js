@@ -137,7 +137,6 @@ const orderMedals = () => {
 // Pantalla FICHA ATLETA
 const showAthleteScreen = (athleteNameFromList) => {
   addClassPerId('medalsPage', 'hide');
-  console.log('entro a ficha de atleta');
   removeClassPerId('header', 'hide');
   removeClassPerId('athletePage', 'hide');
   addClassPerId('menu', 'hide');
@@ -151,7 +150,6 @@ const elementEventClic = () => {
   const listAthlete = document.querySelectorAll('.list');
   listAthlete.forEach(itemAthlete => itemAthlete.addEventListener('click', (event) => {
     const athleteName = event.target.closest('.name').id;
-    console.log('entro a la funcion elementEventClic');
     showAthleteScreen(athleteName);
   }));
 };
@@ -161,7 +159,6 @@ const showMedalsScreen = () => {
   addClassPerId('menu', 'hide');
   // imprimiento el resultados de la fx, medalleros, en el HTML
   athletesList.innerHTML = showMedalists(mostMedals);
-  console.log('entro showMedalsScreen');
   elementEventClic();
   // Ejecutar la funcion de ORDENAR luego de presionar el boton
   const orderButton = document.getElementById('btnOrder');
@@ -172,10 +169,12 @@ const showMedalsScreen = () => {
 };
 
 // Ejecutar la funcion de para mostrar PAGE MEDALLAS
-const medalsButton1 = document.getElementById('btnMedallas1');
 const medalsButton = document.getElementById('btnMedallas');
-medalsButton1.addEventListener('click', showMedalsScreen);
+const medalsButton1 = document.getElementById('btnMedallas1');
+const medalsButton2 = document.getElementById('btnMedallas2');
 medalsButton.addEventListener('click', showMedalsScreen);
+medalsButton1.addEventListener('click', showMedalsScreen);
+medalsButton2.addEventListener('click', showMedalsScreen);
 
 const backMedalist = () => {
   showMedalsScreen();
@@ -187,19 +186,14 @@ backButton.addEventListener('click', backMedalist);
 const btnBurger = document.getElementById('btnBurger');
 
 const showMenu = () => {
-  console.log("entro");
   const burgerMenu = document.getElementById('optionsMenu');
   if (burgerMenu.classList.contains('disabledMenu')) {
-    console.log("mostrar");
     burgerMenu.classList.remove('disabledMenu');
     burgerMenu.classList.add('enabledMenu');
-  }
-  else {
-    console.log("ocultar");
+  } else {
     burgerMenu.classList.remove('enabledMenu');
     burgerMenu.classList.add('disabledMenu');
   }
-
-}
+};
 
 btnBurger.addEventListener('click', showMenu);

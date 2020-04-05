@@ -756,10 +756,6 @@ header #header .logo button {
     /* header #header es el header de las pantallas */
 
     /* Ocultar nav de menu header */
-    
-    header #header {
-        z-index: 3;
-    }
 
     header #header .nav {
         display: none;
@@ -990,6 +986,12 @@ header #header .logo button {
     main #athletePage #athleteFile .greyDiv .secondRow {
         flex-direction: column;
     }
+
+    /* Items ocultos */
+
+    .hide {
+        display: none;
+      }    
 
 
 }
