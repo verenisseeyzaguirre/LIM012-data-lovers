@@ -1,4 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
+import { medalists, sortData, athleteNameFilter } from './data.js';
 
 
 describe('example', () => {
@@ -12,12 +12,19 @@ describe('example', () => {
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+describe('data', () => {
+  it('Es un objeto', () => {
+    expect(typeof data).toBe('object');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  describe('data.medalists', () => {
+    it('Es una función', () => {
+      expect(typeof data.medalists).toBe('function');
+    });
+  
+    it('Debería retornar `example`', () => {
+      expect(data.medalists()).toBe('example');
+    });
   });
+
 });
