@@ -147,7 +147,7 @@ const showAthleteScreen = (athleteNameFromList) => {
   removeClassPerId('athletePage', 'hide');
   addClassPerId('menu', 'hide');
   // llamando a la funcion de data.js
-  const atheleteNameMedalist = athleteNameFilter(medalistsResult, athleteNameFromList);
+  const atheleteNameMedalist = athleteNameFilter(medalistsResult, 'athleteName', athleteNameFromList);
   athleteFile.innerHTML = showAthlete(atheleteNameMedalist);
 };
 

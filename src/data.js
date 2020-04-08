@@ -52,8 +52,8 @@ export const sortData = (data, sortBy, sortOrder) => {
 };
 
 // funcion para filtrar por nombre el .athleteName proviene de medalist
-export const athleteNameFilter = (arrAthletes, nombre) => {
-  const objetoEncontrado = arrAthletes.filter(medallero => (medallero.athleteName === nombre))[0];
+export const athleteNameFilter = (arrAthletes, propiedad, nombre) => {
+  const objetoEncontrado = arrAthletes.filter(medallero => (medallero[propiedad] === nombre))[0];
   return objetoEncontrado;
 };
 
