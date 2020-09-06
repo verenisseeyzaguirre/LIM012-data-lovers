@@ -1,5 +1,8 @@
 # Data Lovers
 
+## Vista principal
+![1. Preámbulo](src/imagenes/vistas/home.png)
+
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
